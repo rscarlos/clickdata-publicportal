@@ -9,6 +9,7 @@ import './css/main.css';
 import es from 'date-fns/locale/es';
 import { registerLocale } from  "react-datepicker";
 import moment from 'moment'; 
+import { Controller } from "react-hook-form"; 
 
 registerLocale('es', es)
 
@@ -226,28 +227,15 @@ export const CBusqueda = () => {
                                             selected={startDate} 
                                             onChange={date => setStartDate(date)} 
                                             locale="es"
-                                            dateFormat= "yyyy-MM-dd"
-                                            ref={register({required:true})}
+                                            dateFormat= "yyyy-MM-dd" 
                                         />
   
                                         {errors.fechaCpe && errors.fechaCpe.type === 'required' && (
                                         <small className="text-danger font-weight-bold">Debe ingresar la Fecha del Comprobante</small>
                                         )}
-                                    </div>
-
-
-                                    {/* <input
-                                    type="text"
-                                    className="form-control"
-                                    id="fechaCpe"
-                                    name="fechaCpe" 
-                                    ref={register({required:true})}
-                                    />
-                                    {errors.fechaCpe && errors.fechaCpe.type === 'required' && (
-                                    <small className="text-danger font-weight-bold">Debe ingresar la Fecha del Comprobante</small>
-                                    )} */}
-
-                                </div>
+                                    </div>  
+                                </div> 
+                                
 
                                 <div className="form-group">
                                     <label htmlFor="importeCpe">Importe Total del Comprobante:</label>

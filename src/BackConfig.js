@@ -4,8 +4,7 @@ export const URL_BACK = 'https://mcwwsskugm.us-east-1.awsapprunner.com/adminapp/
 export const FetchGet = async (endpoint) => {
     console.log(URL_BACK + endpoint);
     const response = await fetch(URL_BACK + endpoint);
-    const content = await response.json();    
-    console.log(URL_BACK + endpoint, content); 
+    const content = await response.json();     
     return content;
 }
 

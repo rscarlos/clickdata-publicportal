@@ -5,8 +5,7 @@ export const FetchGet = async (endpoint) => {
     console.log(URL_BACK + endpoint);
     const response = await fetch(URL_BACK + endpoint);
     const content = await response.json();    
-    console.log(response);
-    console.log(response.json());
+    console.log(URL_BACK + endpoint, content); 
     return content;
 }
 
